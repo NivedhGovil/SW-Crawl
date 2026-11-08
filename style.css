@@ -14,7 +14,7 @@
 .star-wars {
     perspective: 400px;
     position: absolute;
-    top: 0;
+    top: 0; /* To cover the entire browser window. */
     left: 0;
     right: 0;
     bottom: 0;
