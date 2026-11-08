@@ -4,8 +4,8 @@
     width: 100% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
-    font-size: 30px;
-    left: 40%; /* Positions the text in the center of the screen */
+    width: 80%;
+    left: 10%;  /* Positions the text in the center of the screen, starting form 10% of the left. */
 }
 .crawl span {
     color: #69A6AC;
@@ -36,7 +36,7 @@ body{
     10% {
         top: 100%;
      transform: rotateX(25deg) translateZ(0px);
-     opacity: 0;
+     opacity: 1;
 }
     100% {
     top: -3500px;
