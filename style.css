@@ -1,11 +1,12 @@
 .crawl {
     position: absolute;
     animation: crawl 150s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
-    width: 100% ; /* The width of the text container is 80% of the screen */
+    width: 80% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
-    width: 80%;
+    
     left: 10%;  /* Positions the text in the center of the screen, starting form 10% of the left. */
+    font-size: 48px;
 }
 .crawl span {
     color: #69A6AC;
