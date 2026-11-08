@@ -1,6 +1,6 @@
 .crawl {
     position: absolute;
-    animation: crawl 150s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
+    animation: crawl 180s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
     width: 100% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
@@ -39,7 +39,7 @@ body{
 
 
     100% {
-    top: -3500px;
+    top: -9000px;
     transform: rotateX(25deg) translateZ(-1500px); /* translatez pushes it backwards and creates depth.  */ 
     opacity: 1;
 }
