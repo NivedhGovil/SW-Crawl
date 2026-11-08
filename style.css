@@ -1,6 +1,6 @@
 .crawl {
     position: absolute;
-    animation: crawl 100s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
+    animation: crawl 150s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
     width: 100% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
