@@ -48,7 +48,7 @@ body{
 
     100% {
     top: -9000px;
-    transform: rotateX(25deg) translateZ(-1500px); /* translatez pushes it backwards and creates depth.  */ 
+    transform: rotateX(25deg) translateZ(-1000px); /* translatez pushes it backwards and creates depth.  */ 
     opacity: 1;
 }
 
