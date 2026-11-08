@@ -1,25 +1,26 @@
 .crawl {
     position: absolute;
-    animation: crawl 180s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
-    width: 80% ; /* The width of the text container is 80% of the screen */
-    color:  #FFE81F ;
+    animation: crawl 180s infinite linear;
+    width: 90% ; /* Widened slightly from 80% to 90% */
+    color: #FFE81F ;
     text-align: justify;
-    transform-origin: 50% 100%; /* Sets the point around which the 3D transformation occurs */
-    left: 10%;  /* Positions the text in the center of the screen, starting form 10% of the left. */
+    transform-origin: 50% 100%;
+    left: 5%; /* Adjusted to match the 90% width (5% margin on each side) */
     font-size: 48px;
-    line-height: 1.5; /* Adds spacing between lines for readability */
-
+    line-height: 1.5;
 }
 
 .star-wars {
-    perspective: 400px;
+    /* Increased from 400px to 650px to make the text look larger and closer */
+    perspective: 650px;
     position: absolute;
-    top: 0; /* To cover the entire browser window. */
+    top: 0; 
     left: 0;
     right: 0;
     bottom: 0;
     overflow: hidden;
 }
+
 .crawl .title {
     display: block;
     text-align: center;
@@ -28,28 +29,26 @@
 }
 
 .crawl p {
-    margin-bottom: 35px; /* Adds 35px of space after each paragraph */
+    margin-bottom: 35px;
 }
 
-body{
+body {
     background-image: url("background.jpg");
-    background-size: cover; /* makes the image cover the entire screen */
-    overflow: hidden; /* To hide scroll bars */
-    
+    background-size: cover;
+    overflow: hidden;
 }
 
-@keyframes crawl{
-
-    0% { top: 100%;
-     transform: rotateX(25deg) translateZ(-100px);
-     opacity: 1;
-}
-
-
+@keyframes crawl {
+    0% { 
+        top: 100%;
+        /* Removed translateZ(0px) or kept it neutral so it starts full-size */
+        transform: rotateX(25deg) translateZ(0px);
+        opacity: 1;
+    }
     100% {
-    top: -9000px;
-    transform: rotateX(25deg) translateZ(-1000px); /* translatez pushes it backwards and creates depth.  */ 
-    opacity: 1;
-}
-
+        top: -9000px;
+        /* Less extreme depth at the end so it doesn't shrink into a tiny dot */
+        transform: rotateX(25deg) translateZ(-400px); 
+        opacity: 1;
+    }
 }
