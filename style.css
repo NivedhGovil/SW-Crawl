@@ -1,6 +1,6 @@
 .crawl {
     position: absolute;
-    animation: crawl 90s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
+    animation: crawl 100s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
     width: 80% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
@@ -10,13 +10,7 @@
     line-height: 1.5; /* Adds spacing between lines for readability */
 
 }
-.crawl .intro{
-    color: #69A6AC;
-    font-size: 48px;
-    display: block;
-    text-align: center;
-    margin-bottom: 100px; /* Adds 100px of spacing after the text */
-}
+
 
 .crawl .title {
     display: block;
