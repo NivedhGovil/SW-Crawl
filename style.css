@@ -4,22 +4,30 @@
     width: 80% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
-    
+    transform-origin: 50% 100%; /* Sets the point around which the 3D transformation occurs */
     left: 10%;  /* Positions the text in the center of the screen, starting form 10% of the left. */
     font-size: 48px;
 }
-.crawl span {
+.crawl .intro{
     color: #69A6AC;
     font-size: 48px;
     display: block;
     text-align: center;
+    margin-bottom: 100px; /* Adds 100px of spacing after the text */
 }
 
-.crawl strong {
+.crawl .title {
     display: block;
     text-align: center;
     font-size: 72px;
+    text-align: center;
+    margin-bottom: 40px;
 }
+
+.crawl p {
+    margin-bottom: 35px; /* Adds 35px of space after each paragraph */
+}
+
 body{
     background-image: url("background.jpg");
     background-size: cover; /* makes the image cover the entire screen */
