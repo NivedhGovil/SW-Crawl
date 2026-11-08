@@ -5,7 +5,7 @@
     color:  #FFE81F ;
     text-align: justify;
     font-size: 30px;
-    
+    left: 10%; /* Positions the text in the center of the screen */
 }
 body{
     background-image: url("background.jpg");
