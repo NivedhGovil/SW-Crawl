@@ -1,19 +1,23 @@
 .crawl {
     position: absolute;
+    /* Use linear to ensure constant speed */
     animation: crawl 180s infinite linear;
-    /* Increased width from 80% to 94% so it fills out the screen horizontally */
     width: 94%;
     color: #FFE81F;
     text-align: justify;
     transform-origin: 50% 100%;
-    /* Adjusted left from 10% to 3% to center the wider block */
     left: 3%;
-    font-size: 72px;
+    font-size: 85px;
+    font-weight: bold;
     line-height: 1.5;
+    text-shadow: 0 0 12px rgba(255, 232, 31, 0.7);
+    
+    /* Start the text container right below the bottom of the screen */
+    top: 100%;
 }
 
 .star-wars {
-    perspective: 1000px;
+    perspective: 1200px;
     position: absolute;
     top: 0;
     left: 0;
@@ -25,8 +29,10 @@
 .crawl .title {
     display: block;
     text-align: center;
-    font-size: 110px;
+    font-size: 130px;
+    font-weight: bold;
     margin-bottom: 40px;
+    text-shadow: 0 0 20px rgba(255, 232, 31, 0.9);
 }
 
 .crawl p {
@@ -41,13 +47,13 @@ body {
 
 @keyframes crawl {
     0% {
-        top: 100%;
-        transform: rotateX(25deg);
+        /* Start with zero vertical translation from its starting top: 100% position */
+        transform: rotateX(25deg) translateY(0px) translateZ(0px);
         opacity: 1;
     }
     100% {
-        top: -9000px;
-        transform: rotateX(25deg) translateZ(-200px);
+        /* Smoothly slide upward entirely in 3D space for uniform speed */
+        transform: rotateX(25deg) translateY(-2500px) translateZ(-200px);
         opacity: 1;
     }
 }
