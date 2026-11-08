@@ -11,7 +11,15 @@
 
 }
 
-
+.star-wars {
+    perspective: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
 .crawl .title {
     display: block;
     text-align: center;
@@ -27,7 +35,7 @@ body{
     background-image: url("background.jpg");
     background-size: cover; /* makes the image cover the entire screen */
     overflow: hidden; /* To hide scroll bars */
-    perspective: 400px;
+    
 }
 
 @keyframes crawl{
