@@ -1,46 +1,47 @@
-body {
-  background-image: url('background.jpg'); /* Sets a space-themed background. */
-  color: #ffd700; /* Sets the default text color to iconic Star Wars cinematic yellow */
-  font-family: 'orbitron', sans-serif; /* Sets a clean, universal sans-serif font family */
-  height: 100vh; /* Forces the body height to fill 100% of the browser's viewport height */
-  margin: 0; /* Removes default browser margin so elements hug the edges cleanly */
-  overflow: hidden; /* Hides horizontal and vertical scrollbars so the user cannot manually scroll */
-  perspective: 450px; /* Applies 3D perspective depth directly to the page; lower values create a sharper 3D tilt angle */
-  display: flex; /* Turns the body into a flexbox container to easily align child elements */
-  justify-content: center; /* Horizontally centers the .crawl container inside the body */
-}
-
-/* Styles the moving text container box */
 .crawl {
-  position: relative; /* Allows the element to be repositioned using top/bottom coordinates */
-  width: 700px; /* Restricts the width of the text column so it looks balanced and readable */
-  text-align: justify; /* Justifies paragraph text so both left and right margins align evenly */
-  font-size: 2rem; /* Sets a large font size for the body paragraphs */
-  font-weight: bold; /* Makes the text bold so it stands out sharply against the black background */
-  animation: crawl 55s linear infinite; /* Runs our custom 'crawl' animation for 50 seconds, at a steady linear speed, looping forever */
+    position: absolute;
+    animation: crawl 150s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
+    width: 100% ; /* The width of the text container is 80% of the screen */
+    color:  #FFE81F ;
+    text-align: justify;
+    font-size: 30px;
+    left: 40%; /* Positions the text in the center of the screen */
+}
+.crawl span {
+    color: #69A6AC;
+    font-size: 24px;
+    display: block;
+    text-align: center;
 }
 
-h1 {
-  text-align: center; /* Centers the title heading text instead of justifying it */
-  font-size: 3.5rem; /* Makes the heading much larger than standard text */
-  text-transform: uppercase; /* Forces all letters in the heading to capital letters */
+.crawl strong {
+    display: block;
+    text-align: center;
+    font-size: 42px;
+}
+body{
+    background-image: url("background.jpg");
+    background-size: cover; /* makes the image cover the entire screen */
+    overflow: hidden; /* To hide scroll bars */
+    perspective: 500px;
 }
 
-/* Styles all individual paragraphs */
-p {
-  margin-bottom: 2rem; /* Adds spacing below each paragraph block */
+@keyframes crawl{
+
+    0% { top: 100%;
+     transform: rotateX(25deg) translateZ(0px);
+     opacity: 1;
 }
 
-/* Defines the keyframe timeline for the smooth scrolling and 3D transformation animation */
-@keyframes crawl {
-  0% { /* At the very beginning of the 50-second animation cycle */
-    top: 100%; /* Positions the text container completely off the bottom edge of the screen */
-    transform: rotateX(25deg); /* Tilts the text 25 degrees backward on the X-axis for that angled cinematic look */
-    opacity: 1; /* Ensures the text is fully visible right when it enters */
-  }
-  100% { /* At the very end of the 50-second cycle */
-    top: -3500px; /* Moves the text high up into negative space far off the top of the screen */
-    transform: rotateX(25deg) translateZ(-1500px); /* Keeps the tilt while pushing the text backward along the Z-axis, causing it to shrink into the distance */
-    opacity: 0; /* Fades the text completely out into invisibility right as it leaves */
-  }
+    10% {
+        top: 100%;
+     transform: rotateX(25deg) translateZ(0px);
+     opacity: 0;
+}
+    100% {
+    top: -3500px;
+    transform: rotateX(25deg) translateZ(-1500px); /* translatez pushes it backwards and creates depth.  */ 
+    opacity: 0;
+}
+
 }
