@@ -1,7 +1,7 @@
 .crawl {
     position: absolute;
     animation: crawl 100s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
-    width: 80% ; /* The width of the text container is 80% of the screen */
+    width: 100% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
     transform-origin: 50% 100%; /* Sets the point around which the 3D transformation occurs */
