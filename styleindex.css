@@ -1,26 +1,29 @@
 .crawl {
-    
+    position: absolute;
     animation: crawl 60s infinite linear  /*  Infinite constant speed 'crawl' animation for 60s */
     
 }
-.body{
-    background-image: "background.jpg";
+body{
+    background-image: url("background.jpg");
+    background-size: cover; /* makes the image cover the entire screen */
+    overflow: hidden; /* To hide scroll bars */
+    perspective: 500px;
 }
 
 @keyframes crawl{
 
-0% { top: 100%;
+    0% { top: 100%;
      transform: rotateX(25deg);
      opacity: 1;
 }
 
-10% {
+    10% {
         top: 100%;
      transform: rotateX(25deg);
      opacity: 1;
 }
-100% {
-    top: -3500 px;
+    100% {
+    top: -3500px;
     transform: rotateX(25deg) translateZ(-1500px); /* translatez pushes it backwards and creates depth.  */ 
     opacity: 0;
 }
