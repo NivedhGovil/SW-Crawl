@@ -1,18 +1,18 @@
 .crawl {
     position: absolute;
     animation: crawl 180s infinite linear;
-    width: 80%;
+    /* Increased width from 80% to 94% so it fills out the screen horizontally */
+    width: 94%;
     color: #FFE81F;
     text-align: justify;
     transform-origin: 50% 100%;
-    left: 10%;
-    /* Increased base font size from 48px to 72px */
+    /* Adjusted left from 10% to 3% to center the wider block */
+    left: 3%;
     font-size: 72px;
     line-height: 1.5;
 }
 
 .star-wars {
-    /* Pushed perspective even higher to keep things large and upfront */
     perspective: 1000px;
     position: absolute;
     top: 0;
@@ -25,7 +25,6 @@
 .crawl .title {
     display: block;
     text-align: center;
-    /* Increased title font size from 72px to 110px */
     font-size: 110px;
     margin-bottom: 40px;
 }
@@ -48,7 +47,6 @@ body {
     }
     100% {
         top: -9000px;
-        /* Kept depth subtle so it doesn't shrink down too much at the top */
         transform: rotateX(25deg) translateZ(-200px);
         opacity: 1;
     }
