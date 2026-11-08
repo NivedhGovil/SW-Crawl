@@ -1,31 +1,50 @@
+body {
+    height: 100%;
+    margin: 0;
+}
+ 
+body {
+    background: url("background.jpg") center / cover no-repeat;
+    overflow: hidden;
+}
+ 
+.star-wars {
+    perspective: 1200px;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+ 
+/* The tilted floor the text slides along. Its bottom edge is the bottom of
+   the screen and acts as the hinge, so it stays put however long the text is.
+   overflow: hidden keeps text that hasn't risen past the hinge yet from being
+   projected toward (and behind) the viewer. */
+.plane {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200vh;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: rotateX(25deg);
+}
+ 
 .crawl {
     position: absolute;
-    /* Use linear to ensure constant speed */
-    animation: crawl 180s infinite linear;
+    top: 100%;              /* starts just below the hinge, out of sight */
+    left: 3%;
     width: 94%;
     color: #FFE81F;
     text-align: justify;
-    transform-origin: 50% 100%;
-    left: 3%;
     font-size: 85px;
     font-weight: bold;
     line-height: 1.5;
     text-shadow: 0 0 12px rgba(255, 232, 31, 0.7);
-    
-    /* Start the text container right below the bottom of the screen */
-    top: 100%;
+    animation: crawl 180s linear infinite;
+    will-change: transform;
 }
-
-.star-wars {
-    perspective: 1200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-
+ 
 .crawl .title {
     display: block;
     text-align: center;
@@ -34,26 +53,17 @@
     margin-bottom: 40px;
     text-shadow: 0 0 20px rgba(255, 232, 31, 0.9);
 }
-
+ 
 .crawl p {
     margin-bottom: 35px;
 }
-
-body {
-    background-image: url("background.jpg");
-    background-size: cover;
-    overflow: hidden;
-}
-
+ 
+/* A flat slide up the tilted floor; the 3D comes from .plane.
+   -100% is the crawl's own height, so the distance adapts to however much
+   text there is. The extra 180vh carries the last line past the top of the
+   screen before the loop restarts. */
 @keyframes crawl {
-    0% {
-        /* Start with zero vertical translation from its starting top: 100% position */
-        transform: rotateX(25deg) translateY(0px) translateZ(0px);
-        opacity: 1;
-    }
-    100% {
-        /* Smoothly slide upward entirely in 3D space for uniform speed */
-        transform: rotateX(25deg) translateY(-2500px) translateZ(-200px);
-        opacity: 1;
-    }
+    from { transform: translateY(0); }
+    to   { transform: translateY(calc(-100% - 180vh)); }
 }
+ 
