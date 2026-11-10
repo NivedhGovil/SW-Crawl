@@ -1,7 +1,7 @@
 .crawl {
     position: absolute;
     top: 100%; /* Starts the text just below the bottom of the screen */
-    animation: crawl 180s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
+    animation: crawl 220s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
     width: 80% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
@@ -46,9 +46,10 @@ body{
     }
 
     100% {
-        /* Slides the text up the tilted surface by its own height (-100%),
-           plus enough extra to carry the last line out of the top of the screen. */
+        
         transform: rotateX(25deg) translateY(calc(-100% - 250vh));
+        /* Tilts the element by 25 degrees, then it moves 2.5 screens worth 
+         of space along with its own height above its original position. */
     }
 
 }
