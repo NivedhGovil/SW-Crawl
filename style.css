@@ -1,10 +1,11 @@
 .crawl {
     position: absolute;
+    top: 100%; /* Starts the text just below the bottom of the screen */
     animation: crawl 180s infinite linear ; /*  Infinite constant speed 'crawl' animation for 150s */
     width: 80% ; /* The width of the text container is 80% of the screen */
     color:  #FFE81F ;
     text-align: justify;
-    transform-origin: 50% 100%; /* Sets the point around which the 3D transformation occurs */
+    transform-origin: 50% 0%; /* Tilts the text around its top edge, which sits on the bottom of the screen */
     left: 10%;  /* Positions the text in the center of the screen, starting form 10% of the left. */
     font-size: 48px;
     line-height: 1.5; /* Adds spacing between lines for readability */
@@ -12,7 +13,7 @@
 }
 
 .star-wars {
-    perspective: 400px;
+    perspective: 45vh; /* How strongly the text shrinks into the distance (about 400px on a laptop screen) */
     position: absolute;
     top: 0; /* To cover the entire browser window. */
     left: 0;
@@ -40,16 +41,14 @@ body{
 
 @keyframes crawl{
 
-    0% { top: 100%;
-     transform: rotateX(25deg) translateZ(0px);
-     opacity: 1;
-}
-
+    0% {
+        transform: rotateX(25deg) translateY(0); /* rotateX tilts the text back, like the film */
+    }
 
     100% {
-    top: -9000px;
-    transform: rotateX(25deg) translateZ(0px); /* translatez pushes it backwards and creates depth.  */ 
-    opacity: 1;
-}
+        /* Slides the text up the tilted surface by its own height (-100%),
+           plus enough extra to carry the last line out of the top of the screen. */
+        transform: rotateX(25deg) translateY(calc(-100% - 250vh));
+    }
 
 }
