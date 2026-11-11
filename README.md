@@ -4,7 +4,8 @@ This is a web project I built to experiment with styling tricks, and interactive
 
 ## Project Structure
 
-* **`index.html`** - The primary HTML document that sets up the main structure and page content.
+* **`index.html`** - 
+
 * **`style.css`** - CSS stylesheet responsible for the overall look and animation of the site.
 * **`JOURNAL.md`** - A personal dev log where I track my progress, document random thoughts, and note down roadblocks as I build.
 * **`background.jpg`** - The backdrop asset used to establish the visual style and atmosphere.
