@@ -4,11 +4,10 @@ This is a web project I built to experiment with styling tricks, and interactive
 
 ## Project Structure
 
-* **`index.html`** - 
-
-* **`style.css`** - CSS stylesheet responsible for the overall look and animation of the site.
-* **`JOURNAL.md`** - A personal dev log where I track my progress, document random thoughts, and note down roadblocks as I build.
-* **`background.jpg`** - The backdrop asset used to establish the visual style and atmosphere.
+* **`index.html`** - The main body page of the website; it has the story I wrote.
+* **`style.css`** - It is the CSS stylesheet that has the code for the animation
+* **`JOURNAL.md`** - A journal of my progress while building the website. 
+* **`background.jpg`** - The space-themed backdrop image of the website. 
 
 # Deployment
 
